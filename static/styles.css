@@ -1,0 +1,10 @@
+@font-face {
+    font-family: magicretro;
+    src: url('Magic\ Retro.ttf');
+  }
+
+h1 {
+    margin: 0;
+    font-family: 'magicretro', sans-serif;
+    font-weight: 300;
+  }

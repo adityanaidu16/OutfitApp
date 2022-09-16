@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<html>
+   <body>
+    <h1 style="text-align: center; font-family: magicretro; margin-top: 5%;"> The Fit Fixer</h1>
+    <form action="#attractions" method="post">
+
+        <!-- query -->              
+        <div class="form-floating mb-3" style="width: 50%; margin-left: 25%;">
+            <label for="location">Location</label><br>
+            <input class="form-control" placeholder="Location" type="text" name="location_response" style="background-color: #B9B9B1;" required/>
+            <label for="location">Duration</label><br>
+            <input class="form-control" placeholder="Days" type="text" name="duration_response" style="background-color: #B9B9B1;" required/>
+            <br><br><button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+
+    </form>
+   </body>
+</html>
+
+{% endblock %}
