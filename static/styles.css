@@ -3,8 +3,13 @@
     src: url('Magic\ Retro.ttf');
   }
 
+  
 h1 {
     margin: 0;
     font-family: 'magicretro', sans-serif;
     font-weight: 300;
+  }
+  
+  .custom-file-label::-webkit-file-upload-button {
+    visibility: hidden;
   }

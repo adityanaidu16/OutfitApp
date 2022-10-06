@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<html>
+   <body>
+    <form action="#add" method="post">
+        <div class="form-floating mb-3" style="width: 50%; margin-left: 25%;">
+            <label for="name">Name</label><br>
+            <input class="form-control" placeholder="Name" type="text" name="name_response" style="background-color: #B9B9B1;" required/>
+        </div>
+
+        <div class="form-floating mb-3" style="width: 50%; margin-left: 25%;">
+            <label for="upload">Upload</label><br>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile01" style="background-color: #B9B9B1;" required>
+              <label class="custom-file-label" for="inputGroupFile01" style="background-color: #B9B9B1;">Choose file</label>
+            </div>
+          </div>
+
+        <!-- query -->              
+        <div class="form-floating mb-3" style="width: 50%; margin-left: 25%;">
+            <label for="color">Color</label><br>
+            <input class="form-control" placeholder="Color" type="text" name="color_response" style="background-color: #B9B9B1;" required/>
+        </div>
+
+        <div class="form-floating mb-3" style="width: 50%; margin-left: 25%;">
+            <label for="category">Category</label><br>
+            <select id="category" name="category_response" class="form-control" style="background-color: #B9B9B1;" required>
+                <option value="accessories">Accessories</option>
+                <option value="tops">Tops</option>
+                <option value="bottoms">Bottoms</option>
+                <option value="shoes">Shoes</option>
+            </select>
+
+            <br><br><button class="btn btn-primary" type="submit">Submit</button>
+
+        </div>
+
+    </form>
+   </body>
+</html>
+
+{% endblock %}

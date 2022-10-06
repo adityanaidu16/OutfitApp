@@ -5,28 +5,46 @@
 
 <html>
    <body>
-    <form action="#attractions" method="post">
+    <form action="" method="POST" enctype="multipart/form-data">
         <div class="form-floating mb-3" style="width: 50%; margin-left: 25%;">
             <label for="name">Name</label><br>
             <input class="form-control" placeholder="Name" type="text" name="name_response" style="background-color: #B9B9B1;" required/>
         </div>
-
-        <!-- query -->              
+        <!--
         <div class="form-floating mb-3" style="width: 50%; margin-left: 25%;">
-            <label for="color">Color</label><br>
-            <input class="form-control" placeholder="Color" type="text" name="color_response" style="background-color: #B9B9B1;" required/>
+            <label for="formFile">Upload</label><br>
+            <div class="custom-file">
+              <input type="file" class="form-control" type="file" id="formFile" style="background-color: #B9B9B1;" name="filename" src="js/bootstrap-filestyle.min.js" required>
+              <label class="form-label custom-file-label" for="formFile" style="background-color: #B9B9B1;" name="filename">Choose file</label>
+            </div>
         </div>
+        -->
+        <div class="form-floating mb-3" style="width: 50%; margin-left: 25%;"  enctype="multipart/form-data">
+            <label for="formFile" class="form-label">Upload</label>
+            <input class="form-control" type="file" id="formFile" style="background-color: #B9B9B1;" name="file" required>
+        </div>
+        
+
+        <script>
+            $('formFile').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.form-label').html(fileName);
+            })
+        </script>
 
         <div class="form-floating mb-3" style="width: 50%; margin-left: 25%;">
             <label for="category">Category</label><br>
             <select id="category" name="category_response" class="form-control" style="background-color: #B9B9B1;" required>
                 <option value="accessories">Accessories</option>
+                <option value="outerwear">Outerwear</option>
                 <option value="tops">Tops</option>
                 <option value="bottoms">Bottoms</option>
                 <option value="shoes">Shoes</option>
             </select>
 
-            <br><br><button class="btn btn-primary" type="submit">Submit</button>
+            <br><br><button class="btn btn-primary" type="submit" value="Submit">Submit</button>
 
         </div>
 
